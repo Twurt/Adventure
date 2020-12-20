@@ -20,7 +20,7 @@ class Fighter(Character):
         print(f"{self.name} punched {character.name} for {damage} damage")
         return damage
         
-    def special(self, character):
+    def special_attack(self, character):
         if self.special:
             damage = self.roll20() * 20
             print(f"{self.name} roundhouse kicked {character.name} for {damage} damage!")
@@ -40,7 +40,7 @@ class Wizard(Character):
         print(f"{self.name} bonked {character.name} for {damage} damage")
         return damage
         
-    def special(self, character):
+    def special_attack(self, character):
         if self.special:
             damage = self.roll20() + 25
             print(f"{self.name} blasted {character.name} for {damage} damage!")
@@ -60,7 +60,7 @@ class Rogue(Character):
         print(f"{self.name} stabbed {character.name} for {damage} damage")
         return damage
         
-    def special(self, character):
+    def special_attack(self, character):
         if self.special:
             damage = 20 * character.defense
             print(f"{self.name} backstabbed {character.name} for {damage} damage")

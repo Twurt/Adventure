@@ -11,7 +11,7 @@ def combat(good_guy, bad_guy):
     while not good_guy.is_dead() and not bad_guy.is_dead():
         good_guy.health -= bad_guy.attack(good_guy)
         if good_guy.special and good_guy.roll20() > 15:
-            bad_guy.health -= good_guy.special(bad_guy)
+            bad_guy.health -= good_guy.special_attack(bad_guy)
         else: 
             bad_guy.health -= good_guy.attack(bad_guy)
         
